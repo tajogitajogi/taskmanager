@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>TASKS</title>
+</head>
+<body>
+    {% for el in task %}
+    <div class="container">
+        <div class="row mb-100 text-center ">
+            <div class="col-xl-1 themed-grid-col boxno" ></div>
+            <div class="col-xl-4 themed-grid-col boxno" ></div>
+            <div class="col-xl-2 themed-grid-col box">DATE</div>
+         </div>
+         <div class="row mb-100 text-center">
+            <div class="col-xl-1 themed-grid-col boxno" ></div>
+            <div class="col-xl-4 themed-grid-col box ">Task</div>
+            <div class="col-xl-1 themed-grid-col box" >start</div>
+            <div class="col-xl-1 themed-grid-col box">stop</div>
+            <div class="col-xl-1 themed-grid-col box">TIME</div>
+         </div>
+         <div class="row mb-100 text-center">
+            <div class="col-xl-1 themed-grid-col box">=</div>
+            <div class="col-xl-4 themed-grid-col box">{% block task %}{% endblock %}</div>
+            <div class="col-xl-1 themed-grid-col box ">{% block start %}{% endblock %}</div>
+            <div class="col-xl-1 themed-grid-col box ">{% block stop %}{% endblock %} </div>
+            <div class="col-xl-1 themed-grid-col box">{% block time %}{% endblock %}</div>
+            <div class="col-xl-1 themed-grid-col box">-</div>
+         </div>
+         
+         <div class="row mb-100 text-center">
+            <div class="col-xl-1 themed-grid-col boxno" ></div>
+            <div class="col-xl-4 themed-grid-col boxno "></div>
+            <div class="col-xl-1 themed-grid-col boxno" ></div>
+            <div class="col-xl-1 themed-grid-col boxno" ></div>
+            <div class="col-xl-1 themed-grid-col boxno" ></div>
+            <div class="col-xl-1 themed-grid-col box">+</div>
+         </div>
+    </div>
+    {% endfor %}
+</body>
